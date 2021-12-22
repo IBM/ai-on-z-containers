@@ -15,7 +15,7 @@ from the spaCy github project:
 
 ## Usage
 
-This image can be built using the podman or docker build command.  e.g., 'docker build -t 'spacy_s390x' .' 
+This image can be built using the podman or docker build command.  e.g., `docker build -t 'spacy_s390x' .`
 Note that this docker files relies on base images from the [IBM Z and LinuxONE Container Image Registry (ICR) ](https://ibm.github.io/ibm-z-oss-hub/main/main.html). 
 
 This build file includes jupyter and an example notebook to demonstrate basic syntax analysis with spaCy. 
