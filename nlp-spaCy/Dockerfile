@@ -50,6 +50,9 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /git
 #CLONE current versions 
+RUN git clone https://github.com/explosion/murmurhash.git \ 
+    && cd murmurhash \ 
+    && pip install . 
 RUN git clone https://github.com/explosion/thinc.git \ 
     && cd thinc \ 
     && pip install -r requirements.txt \ 
