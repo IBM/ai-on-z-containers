@@ -19,7 +19,7 @@ Additionally, note that numerous pre-built s390x images are available in ICR.
 
 | Folder(topic) | Description   |
 | ------------- | ------------- |
-| nlp-spaCy     | spaCy library for natural language processing use cases |
+| [nlp-spaCy](/nlp-spaCy)     | spaCy library for natural language processing use cases |
 
 
 ## License
