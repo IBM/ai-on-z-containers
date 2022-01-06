@@ -1,14 +1,18 @@
 # © Copyright IBM Corporation 2022.
 # LICENSE: Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0)
 
-################ Dockerfile for spaCy 3.1.x ######################
+################ Dockerfile for NLP #################################################
 #
-# This Dockerfile builds a basic installation of spaCy
+# This Dockerfile builds a basic installation of a set of Natural Language Processing 
+# libraries including spaCy and NLTK. 
 #
 # spaCy (https://spacy.io/) is a python-based Natural Language Processing library
 # that excels at large-scale information extraction tasks. It has support for a large
 # number of languages (64+) and has a huge number of features, which have made it one of
 # the most widely used libraries for NLP in production. 
+#
+# NLTK (https://github.com/nltk/nltk) is the Natural Language Toolkit, a python toolkit 
+# for building programs to work with human languge data. 
 #
 # This dockerfile was obtained from https://github.com/IBM/ai-on-z-containers
 #
@@ -46,7 +50,8 @@ RUN apt-get update && apt-get install -y \
   && pip3 install --no-cache-dir \
   wheel \ 
   numpy \
-  jupyter
+  jupyter \
+  nltk
 
 WORKDIR /git
 #CLONE current versions 
