@@ -19,16 +19,9 @@ Additionally, note that numerous pre-built s390x images are available in ICR.
 
 | Folder(topic) | Description   |
 | ------------- | ------------- |
-| nlp-spaCy     | spaCy library for natural language processing use cases |
+| nlp-libs     | spaCy, NLTK libraries for natural language processing use cases |
 
 
 ## License
 
 If you would like to see the detailed LICENSE click [here](LICENSE).
-
-```text
-#
-# Copyright 2020- IBM Inc. All rights reserved
-# SPDX-License-Identifier: Apache2.0
-#
-```
