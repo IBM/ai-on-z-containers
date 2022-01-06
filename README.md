@@ -1,4 +1,3 @@
-<!-- This should be the location of the title of the repository, normally the short name -->
 # ai-on-z-containers
 
 ## Scope
