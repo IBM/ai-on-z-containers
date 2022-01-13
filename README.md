@@ -12,8 +12,9 @@ or built upon. They build open-source based (not proprietary) images.
 These build files commonly rely on base images from the [IBM Z and LinuxONE Container Image Registry (ICR) ](https://ibm.github.io/ibm-z-oss-hub/main/main.html). 
 This will require free basic authentication. Details can be found at the ICR link above.
 
-Additionally, note that numerous pre-built s390x images are available in ICR.
-More dockerfiles can be found on the [LinuxONE github organization](https://github.com/linux-on-ibm-z/dockerfile-examples).
+Note that numerous pre-built s390x images are available in ICR.
+
+Additional dockerfiles can be found on the [LinuxONE github organization](https://github.com/linux-on-ibm-z/dockerfile-examples).
 
 ## Content
 
