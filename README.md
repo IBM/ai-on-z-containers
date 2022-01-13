@@ -2,7 +2,7 @@
 
 ## Scope
 
-The purpose of this project is to provide container build files for AI software that can be utilized in s390x 
+The purpose of this project is to provide __sample__ container build files for AI software that can be utilized in s390x 
 environments.
 
 These container files (i.e., dockerfiles or containerfiles) are provided as examples that can be used directly 
