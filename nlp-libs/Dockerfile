@@ -73,7 +73,7 @@ RUN git clone https://github.com/andrewsi-z/thinc-bigendian-ops.git \
     && pip install . 
 RUN wget https://github.com/explosion/spaCy/archive/refs/tags/v3.2.3.tar.gz \
     && tar -xvf v3.2.3.tar.gz \
-    && cd spacy-v3.2.3 \ 
+    && cd spaCy-3.2.3 \ 
     && pip install -r requirements.txt \ 
     && pip install --no-build-isolation --editable .
 
