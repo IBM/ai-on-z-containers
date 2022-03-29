@@ -5,6 +5,10 @@
 #
 # This Dockerfile builds a basic installation of a set of Natural Language Processing 
 # libraries including spaCy and NLTK. 
+# 
+# Note:
+# - All git repositories listed are maintained by their respective communities.
+# - This container will expose port 8888
 #
 # spaCy (https://spacy.io/) is a python-based Natural Language Processing library
 # that excels at large-scale information extraction tasks. It has support for a large
@@ -25,7 +29,7 @@
 FROM icr.io/ibmz/ubuntu:20.04
 
 # The author
-LABEL maintainer="AI on Z Team (https://www.ibm.com/support/z-content-solutions/journey-to-ai-on-z/)"
+LABEL maintainer="AI on IBM zSystems (https://www.ibm.com/support/z-content-solutions/journey-to-ai-on-z/)"
 
 ARG DEBIAN_FRONTEND="noninteractive"
 
@@ -55,19 +59,21 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /git
 #CLONE current versions 
-RUN git clone https://github.com/explosion/murmurhash.git \ 
-    && cd murmurhash \ 
+RUN wget https://github.com/explosion/murmurhash/archive/refs/tags/v1.0.7.dev0.tar.gz \
+    && tar -xvf v1.0.7.dev0.tar.gz \
+    && cd murmurhash-1.0.7.dev0 \ 
     && pip install . 
-RUN git clone https://github.com/explosion/thinc.git \ 
-    && cd thinc \ 
+RUN wget https://github.com/explosion/thinc/archive/refs/tags/v8.0.15.tar.gz \ 
+    && tar -xvf v8.0.15.tar.gz \
+    && cd thinc-8.0.15 \
     && pip install -r requirements.txt \ 
     && pip install --no-build-isolation --editable .
 RUN git clone https://github.com/andrewsi-z/thinc-bigendian-ops.git \ 
     && cd thinc-bigendian-ops \ 
     && pip install . 
-RUN git clone https://github.com/explosion/spaCy \
-    && cd spaCy \ 
-    && git checkout v3.1.x \
+RUN wget https://github.com/explosion/spaCy/archive/refs/tags/v3.2.3.tar.gz \
+    && tar -cvf v3.2.3.tar.gz \
+    && cd spaCy-v3.2.3 \ 
     && pip install -r requirements.txt \ 
     && pip install --no-build-isolation --editable .
 
