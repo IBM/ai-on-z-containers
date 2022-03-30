@@ -8,7 +8,7 @@
 # 
 # Note:
 # - All git repositories listed are maintained by their respective communities.
-# - This container will expose port 8888
+# - This container will expose port 8888 and should be mapped by the docker run command.
 #
 # spaCy (https://spacy.io/) is a python-based Natural Language Processing library
 # that excels at large-scale information extraction tasks. It has support for a large
@@ -35,7 +35,7 @@ ARG DEBIAN_FRONTEND="noninteractive"
 
 RUN apt-get update && apt-get install -y \
   software-properties-common \
-  python3 \
+  python3.6 \
   python3-dev \
   python3-pip \
   python3-scipy \
@@ -47,15 +47,18 @@ RUN apt-get update && apt-get install -y \
   libopenblas-dev \
   wget \
   build-essential \
-  nano \ 
+  nano \
   unzip \
-  git \ 
+  git \
   && pip3 install --upgrade pip \
   && pip3 install --no-cache-dir \
-  wheel \ 
+  wheel \
+  jinja2==3.0.2 \
   numpy \
+  click==8.0.2 \
   jupyter \
   nltk
+
 
 WORKDIR /git
 #CLONE current versions 
