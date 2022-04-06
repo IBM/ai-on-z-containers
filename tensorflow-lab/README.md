@@ -8,7 +8,7 @@ https://github.com/IBM/ai-on-z-containers
 ### Create a volume to store the notebook and data set
 `docker volume create tf-lab-resources`
 ### Clone the example repository in to the volume we just created
-`docker run --rm -v tf-lab-resources:/git icr.io/ibmz/git:1.0.34 clone git@github.com:IBM/ai-on-z-containers.git`
+`docker run --rm -v tf-lab-resources:/git icr.io/ibmz/git:1.0.34 clone https://github.com/IBM/ai-on-z-containers`
 ### Build the Dockerfile in the tensorflow-lab directory. This image will contain Tensorflow 2.5, Jupyter Notebook and additional dependencies for training a model
 `docker run --rm -v tf-lab-resources:/workdir/ -v /var/run/docker.sock:/var/run/docker.sock:ro --workdir /workdir icr.io/ibmz/docker:18.06.3 build ./ai-on-z-containers/tensorflow-lab/ --tag tf-lab-notebook:2.5.0`
 
