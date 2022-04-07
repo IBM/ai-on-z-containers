@@ -1,4 +1,4 @@
-FROM icr.io/ibmz/tensorflow:2.5.0
+FROM icr.io/ibmz/tensorflow:2.4.0
 RUN pip3 install matplotlib pandas sklearn pydot numpy notebook
 RUN useradd -m -s /bin/bash tensorflow
 RUN apt-get update && apt-get install dumb-init graphviz -y
