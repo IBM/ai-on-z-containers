@@ -23,7 +23,7 @@ https://github.com/IBM/ai-on-z-containers
 `docker network create tf-lab-network`
 
 ### Start the notebook server that we previously built
-`docker run --name tf-lab-notebook --rm -d -v tf-lab-model:/home/tensorflow/tensorflow-lab/saved_model -p 8889:8888 --network tf-lab-network tf-lab-notebook:2.4.0`
+`docker run --name tf-lab-notebook --rm -d -v tf-lab-model:/home/tensorflow/tensorflow-lab/saved_model -p 8888:8888 --network tf-lab-network tf-lab-notebook:2.4.0`
 
 ### Using the Jupyter Notebook:
 At this point the Jupyter Notebook should be accessible at port at `http://[YOUR-SYSTEM-IP]:8888`
