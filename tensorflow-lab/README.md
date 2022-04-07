@@ -18,6 +18,10 @@ https://github.com/IBM/ai-on-z-containers
 
 ### Now we create a volume to store the model that we will build
 `docker volume create tf-lab-model`
+
+### Create a docker network for both our notebook and serving containers to run under so they can communicate
+`docker network create tf-lab-network`
+
 ### Start the notebook server that we previously built
 `docker run --name tf-lab-notebook --rm -d -v tf-lab-model:/home/tensorflow/tensorflow-lab/saved_model -p 8889:8888 --network tf-lab-network tf-lab-notebook:2.4.0`
 
