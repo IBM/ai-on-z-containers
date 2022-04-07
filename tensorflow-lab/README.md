@@ -30,7 +30,7 @@ In order to login to the Notebook you'll need to copy the authorization token, i
 You can now proceed the zAI_TF_Lab notebook until you make it to section 18
 
 ### Now that there is a model created and saved in our tf-lab-volume we create a Tensorflow Serving container to host our model.
-`docker run -d --rm -p 8501:8501 -v "tf-lab-model:/models/saved_model" -e MODEL_NAME=saved_model --network tf-lab-network icr.io/ibmz/tensorflow-serving:2.4.0`
+`docker run --name tf-lab-serving -d --rm -p 8501:8501 -v "tf-lab-model:/models/saved_model" -e MODEL_NAME=saved_model --network tf-lab-network icr.io/ibmz/tensorflow-serving:2.4.0`
 
 ### Testing the Tensorflow Serving instance:
 At this point you should be able to continue section 18 of the notebook and complete the demonstration.
