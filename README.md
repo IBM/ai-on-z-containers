@@ -1,4 +1,4 @@
-# ai-on-z-containers
+# IBM zSystems and LinuxONE Container files and samples
 
 ## Scope
 
