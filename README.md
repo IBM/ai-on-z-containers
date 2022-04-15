@@ -30,6 +30,7 @@ Additional dockerfiles can be found on the [LinuxONE github organization](https:
 | Folder(topic) | Description   |
 | ------------- | ------------- |
 | nlp-libs     | spaCy, NLTK libraries for natural language processing use cases |
+| tensorflow lab | TensorFlow development, training, and deployment lab |
 
 
 ## License
