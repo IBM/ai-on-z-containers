@@ -23,7 +23,7 @@ This will require free basic authentication. Details can be found at the ICR lin
 
 Note that numerous pre-built s390x images are available in ICR.
 
-Additional dockerfiles can be found on the [LinuxONE github organization](https://github.com/linux-on-ibm-z/dockerfile-examples).
+Additional dockerfiles can be found on the [Linux on IBM zSystems github organization](https://github.com/linux-on-ibm-z/dockerfile-examples).
 
 ## Content
 
