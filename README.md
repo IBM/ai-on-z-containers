@@ -2,11 +2,20 @@
 
 ## Scope
 
-The purpose of this project is to provide __sample__ container build files for AI software that can be utilized in s390x 
+The purpose of this project is to provide __sample__ container build files along with examples for AI software that can be utilized in s390x 
 environments.
 
-These container files (i.e., dockerfiles or containerfiles) are provided as examples that can be used directly 
-or built upon. They build open-source based (not proprietary) images. 
+These container files (i.e., dockerfiles or container files) and other materials are provided as examples.
+They build open-source based (not proprietary) images. 
+
+The maintainers of this repository do not assert to be experts in containers or container security.
+Resources include:
+  - [Docker engine security] (https://docs.docker.com/engine/security/)
+  - [Dockerfile best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
+  - [Docker getting started resources](https://docs.docker.com/get-started/resources/)
+
+Similar resources and practices can be followed for podman. 
+
 
 ## Usage
 These build files commonly rely on base images from the [IBM Z and LinuxONE Container Image Registry (ICR) ](https://ibm.github.io/ibm-z-oss-hub/main/main.html). 
