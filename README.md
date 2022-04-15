@@ -10,7 +10,7 @@ They build open-source based (not proprietary) images.
 
 The maintainers of this repository do not assert to be experts in containers or container security.
 Resources include:
-  - [Docker engine security] (https://docs.docker.com/engine/security/)
+  - [Docker engine security](https://docs.docker.com/engine/security/)
   - [Dockerfile best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
   - [Docker getting started resources](https://docs.docker.com/get-started/resources/)
 
