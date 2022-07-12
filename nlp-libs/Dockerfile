@@ -62,21 +62,21 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /git
 #CLONE current versions 
-RUN wget https://github.com/explosion/murmurhash/archive/refs/tags/v1.0.7.dev0.tar.gz \
-    && tar -xvf v1.0.7.dev0.tar.gz \
-    && cd murmurhash-1.0.7.dev0 \ 
+RUN wget https://github.com/explosion/murmurhash/archive/refs/tags/v1.0.7.tar.gz \
+    && tar -xvf v1.0.7.tar.gz \
+    && cd murmurhash-1.0.7 \ 
     && pip install . 
-RUN wget https://github.com/explosion/thinc/archive/refs/tags/v8.0.15.tar.gz \ 
-    && tar -xvf v8.0.15.tar.gz \
-    && cd thinc-8.0.15 \
+RUN wget https://github.com/explosion/thinc/archive/refs/tags/v8.0.17.tar.gz \ 
+    && tar -xvf v8.0.17.tar.gz \
+    && cd thinc-8.0.17 \
     && pip install -r requirements.txt \ 
     && pip install --no-build-isolation --editable .
 RUN git clone https://github.com/andrewsi-z/thinc-bigendian-ops.git \ 
     && cd thinc-bigendian-ops \ 
     && pip install . 
-RUN wget https://github.com/explosion/spaCy/archive/refs/tags/v3.2.3.tar.gz \
-    && tar -xvf v3.2.3.tar.gz \
-    && cd spaCy-3.2.3 \ 
+RUN wget https://github.com/explosion/spaCy/archive/refs/tags/v3.3.1.tar.gz \
+    && tar -xvf v3.3.1.tar.gz \
+    && cd spaCy-3.3.1 \ 
     && pip install -r requirements.txt \ 
     && pip install --no-build-isolation --editable .
 
