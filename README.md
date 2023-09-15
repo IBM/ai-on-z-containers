@@ -29,6 +29,7 @@ Additional dockerfiles can be found on the [Linux on IBM zSystems github organiz
 
 | Folder(topic) | Description   |
 | ------------- | ------------- |
+| jupyter-tf     | Sandbox environment for data science python libraries  |
 | nlp-libs     | spaCy, NLTK libraries for natural language processing use cases |
 | tensorflow lab | TensorFlow development, training, and deployment lab |
 
