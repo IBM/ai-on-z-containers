@@ -16,9 +16,6 @@ RUN apt-get update && apt-get install -y \
   libblas-dev  \
   liblapack-dev \
   libopenblas-dev 
-  
-
-#COPY ./tfonnx_conversion.ipynb /notebooks/
 
 RUN pip3 install --upgrade pip \
     && pip3 install --no-cache-dir \
