@@ -1,0 +1,21 @@
+--- s390x-conda-linux-gnu/sysroot/usr/lib64/libc.so.orig        2021-01-20 07:49:39.000000000 +0100
++++ s390x-conda-linux-gnu/sysroot/usr/lib64/libc.so     2023-07-27 13:23:01.375627124 +0200
+@@ -2,4 +2,4 @@
+    Use the shared library, but some functions are only in
+    the static library, so try that secondarily.  */
+ OUTPUT_FORMAT(elf64-s390)
+-GROUP ( /lib64/libc.so.6 /usr/lib64/libc_nonshared.a  AS_NEEDED ( /lib/ld64.so.1 ) )
++GROUP ( /lib64/libc.so.6 /usr/lib64/libc_nonshared.a  AS_NEEDED ( /lib/ld-2.17.so ) )
+--- info/paths.json.orig        2021-01-20 07:49:44.000000000 +0100
++++ info/paths.json     2023-07-27 13:35:39.135331216 +0200
+@@ -4485,8 +4485,8 @@
+     {
+       "_path": "s390x-conda-linux-gnu/sysroot/usr/lib64/libc.so",
+       "path_type": "hardlink",
+-      "sha256": "fde34cbbc612728883b402c2f3964dd3d1e1ef6258d8f65cb14a831c5b5fa9ff",
+-      "size_in_bytes": 238
++       "sha256": "b615275dacd318de17795c8692abc931e95ed3c18719db699d1d7f898b97df18",
++      "size_in_bytes": 239
+     },
+     {
+       "_path": "s390x-conda-linux-gnu/sysroot/usr/lib64/libc_nonshared.a",
