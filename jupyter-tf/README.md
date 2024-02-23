@@ -7,17 +7,24 @@ The project contains a container file which demonstrates building a data science
 
 This container file relies on base images from the [IBM Z and LinuxONE Container Image Registry (ICR) ](https://ibm.github.io/ibm-z-oss-hub/main/main.html). Specifically, a TensorFlow base image is utilized. 
 
-Additional packages include:
-- ibm-zdnn-plugin (TensorFlow IBM z16 accelerator support)
-- xgBoost
-- IBM Snap ML
+Dockerfile includes:
+- IBM z16 and LinuxONE 4 Accelerated TensorFlow base image.
+- MLFlow
+    
+
+Dockerfile.minimal includes:
+- IBM z16 and LinuxONE 4 Accelerated TensorFlow base image.
+- IBM z16 and LinuxONE 4 Accelerated Snap ML library
 - Scikit-learn
+- xgBoost
 - jupyter
 
 
 ## Usage
 
-This image can be built using the podman or docker build command.  e.g., `docker build -t 's390x-dev' .`
+These dockerfiles are samples only and are provided without warranty.
+
+This image can be built using the podman or docker build commands. 
 
 Once this image is built, you can start a container using a command like this:
 `docker run -d --rm -p 8571:8888 <image_id> `
